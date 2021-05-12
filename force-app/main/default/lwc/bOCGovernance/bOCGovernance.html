@@ -1,0 +1,52 @@
+<template >
+<template if:true={viewform}>
+    <div class="slds-clearfix">
+        <div class="slds-float_right">
+            <lightning-button class="slds-m-top_small" variant="brand"  name="Edit" label="Edit" onclick={onEditview}>
+        </lightning-button>
+    </div>
+    </div>
+    <lightning-record-form record-id={recordId} object-api-name={objectApiName}
+fields={fields} columns="2" mode="readonly" onsubmit={handleSubmit}>
+</lightning-record-form>
+</template>
+
+<template if:true={disp2}>
+<lightning-record-edit-form record-id={recordId} object-api-name={objectApiName} onsubmit={handleSubmit}>
+<lightning-messages></lightning-messages>
+<div class="status-width">
+<lightning-input-field field-name="Governance_Communication_Status__c" required value={status}>
+</lightning-input-field>
+    </div>
+    <div class="comment-width">
+    <lightning-input-field field-name="Governance_Comment__c" value={comment}>
+    </lightning-input-field>
+    </div>
+    <div class="slds-align_absolute-center slds-p-around_medium">
+    <lightning-button class="slds-m-around_xx-small" variant="brand" type="submit" name="Save" label="Save" onclick={clickEvent}></lightning-button>
+    <lightning-button class="slds-m-around_xx-small" variant="brand"  name="Cancel" label="Cancel" onclick={handleReset}></lightning-button>
+    </div>
+</lightning-record-edit-form>
+
+</template>
+
+<template if:true={disp3}>
+    <div class="slds-clearfix">
+        <div class="slds-float_right">
+            <lightning-button class="slds-m-top_small" variant="brand"  name="Edit" label="Edit" onclick={onEditview}>
+        </lightning-button>
+    </div>
+    </div>
+    <div class="slds-form-element slds-form-element_readonly">
+        <span class="slds-form-element__label">Status</span>
+        <div class="slds-form-element__control">
+          <div class="slds-form-element__static">{fstatus}</div>
+        </div>
+        <span class="slds-form-element__label">Comment</span>
+        <div class="slds-form-element__control">
+          <div class="slds-form-element__static">{fcomment}</div>
+        </div>
+      </div>
+</template>
+
+</template>

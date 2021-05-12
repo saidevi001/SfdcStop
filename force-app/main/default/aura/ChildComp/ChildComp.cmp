@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="fn" type="String" default="devi"/>
+    {!fn}
+    <div>
+    <p class="paragraph">How's ur day</p>
+    </div>
+    <H1>Hello Devi</H1>
+    <h6>Devi</h6>
+</aura:component>

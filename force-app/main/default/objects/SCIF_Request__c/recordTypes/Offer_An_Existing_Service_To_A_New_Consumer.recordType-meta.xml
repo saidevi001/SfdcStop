@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Offer_An_Existing_Service_To_A_New_Consumer</fullName>
+    <active>true</active>
+    <label>Offer An Existing Service To A New Consumer</label>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CBRO Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CFO Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EASP Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PBRO Review</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

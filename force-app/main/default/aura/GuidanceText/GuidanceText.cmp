@@ -1,0 +1,45 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="GuidanceTextController" >
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="intervalId" type="Integer" default="0"/>
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+      <aura:attribute name="title" type="String" default="Guidance for Success"/>
+    
+    <Aura:attribute name="guidanceText" type="String" />
+  
+    <aura:if isTrue="{!not(empty(v.guidanceText))}">
+        <div class="slds-box ">
+          <!--  <div id="parentDIV" style="overflow:hidden">-->
+                <div class="slds-p-horizontal_small">
+               <!-- <p style="position:relative;" id="tofloat">-->
+                      
+                    <lightning:formattedRichText value="{!v.guidanceText}"/>
+                <!--</p>-->
+           </div>
+        </div>
+    </aura:if>
+    
+    
+     <lightning:card>
+         <div class="slds-p-horizontal_small">
+        <aura:set attribute="title">
+            <lightning:icon iconName="utility:connected_apps" size="small"/>
+            {! v.title }
+        </aura:set>
+        <aura:set attribute="footer">
+            
+        </aura:set>
+        <p><lightning:formattedRichText value="{!v.guidanceText}" /></p>
+         </div>
+    </lightning:card>
+     <!-- <aura:if isTrue="{!not(empty(v.guidanceText))}">
+    <aura:component>
+    <lightning:card  title="Guidance for Success">
+      
+        <p class="slds-p-horizontal_small">
+            {!v.guidanceText}
+        </p>
+    </lightning:card>
+</aura:component>
+    </aura:if>-->
+</aura:component>

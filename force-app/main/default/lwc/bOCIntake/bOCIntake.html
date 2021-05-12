@@ -1,0 +1,21 @@
+<template >
+<template if:true={viewform}>
+    <div class="slds-clearfix">
+        <div class="slds-float_right">
+            <lightning-button class="slds-m-top_small" variant="brand"  name="Edit" label="Edit" onclick={onEditview}>
+        </lightning-button>
+    </div>
+    </div>
+    <lightning-record-form record-id={recordId} object-api-name={objectApiName}
+fields={fields} columns="1" mode="readonly" onsubmit={handleSubmit}>
+</lightning-record-form>
+</template>
+
+<template if:false={viewform}>
+    <lightning-record-form record-id={recordId} object-api-name={objectApiName} 
+    fields={fields} columns="1" mode="edit" onsubmit={handleSubmit}>
+    </lightning-record-form>
+
+</template>
+
+</template>

@@ -1,0 +1,21 @@
+<aura:component controller="GuidanceTextController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="cars" type="String[]" default="Sports Car, Luxury Car"/>
+    <aura:attribute name="accName" type="String" default="Acc0"/>
+    <aura:attribute name="accrec" type="Account"/>
+    <lightning:layout horizontalAlign="center" >
+        <lightning:layoutItem padding="around-medium">
+
+            <lightning:select name="selectItem" aura:id="CarType" label="All Types" variant="Label-hidden" value="">
+                <option value="" text="All Types"/>
+                <aura:Iteration Items="{!v.cars}" var="Car">
+                    <option value="" text="{!v.Car}"/>
+                </aura:Iteration>
+            </lightning:select>
+        </lightning:layoutItem >
+        <lightning:layoutItem  padding="around-medium">
+            <p> {!accName}</p>
+            <lightning:button variant="brand" label="Search"  />
+             <lightning:button label="New" onclick="{!c.doSearch}"  />
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

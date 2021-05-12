@@ -1,0 +1,7 @@
+<aura:component controller="LC" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="displayName" type="String" default="Saidevi"/>
+    <aura:attribute name="opRec" type="Opportunity"/>
+    <aura:attribute name="outputName" type="String"/>
+    <lightning:button variant="base" label="display" title="display" onclick="{!c.handleClick}"/>
+   {!v.outputName}
+</aura:component>
