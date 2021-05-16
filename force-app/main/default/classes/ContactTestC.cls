@@ -1,6 +1,6 @@
 @isTest
 public class ContactTestC {
-
+//comment
 @isTest
     static void testcon(){
         Account a = new Account();
