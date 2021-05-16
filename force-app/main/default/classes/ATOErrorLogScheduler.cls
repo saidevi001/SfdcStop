@@ -7,6 +7,7 @@ public class ATOErrorLogScheduler implements Schedulable{
         return System.schedule('ATOErrorLog Delete batch', sched, SC);
     }
 
+    //comment added
     public void execute(SchedulableContext sc) {
         ATODeleteBatch b1 = new ATODeleteBatch('ATO_Error_Log__c');
         ID batchprocessid = Database.executeBatch(b1,50);           
